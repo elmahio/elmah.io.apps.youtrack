@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>$version$</version>
+    <authors>elmah.io</authors>
+    <owners>elmah.io</owners>
+    <id>elmah.io.apps.youtrack</id>
+    <title>YouTrack Integration</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Create a new issue in YouTrack when a new error is logged on elmah.io.</description>
+    <projectUrl>https://github.com/elmahio/elmah.io.apps.youtrack</projectUrl>
+    <iconUrl>https://elmah.io/images/appstore/elmah.io.apps.youtrack.png</iconUrl>
+	<tags>Error Exception Reporting Management Logging ELMAH Diagnostics Tracing YouTrack</tags>
+  </metadata>
+  <files>
+    <file src="manifest.json" target="manifest.json" />
+  </files>
+</package>

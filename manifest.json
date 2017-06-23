@@ -1,0 +1,38 @@
+{
+	"variables": [{
+		"key": "token",
+		"name": "Token",
+		"description": "An access token from YouTrack needed to call the YouTrack API",
+		"example": "perm:cm9vdA==.ZmZm.5ZhYEwe3OlN78qWTAyRCUdE4w10pws",
+		"type": "text",
+		"required": true
+	},{
+		"key": "instance",
+		"name": "Instance",
+		"description": "The instance name of your YouTrack InCloud host (if URL is https://elmahio.myjetbrains.com, your instance name is 'elmahio')",
+		"example": "elmahio",
+		"type": "text",
+		"required": true
+	},{
+		"key": "project",
+		"name": "Project",
+		"description": "The ID of the YouTrack project you need new issues created within",
+		"example": "DEVELOPMENT",
+		"type": "text",
+		"required": true
+	}],
+	"rule": {
+		"title": "Create a new issue in YouTrack on all errors",
+		"query": "isNew:true AND (severity:Error OR severity:Fatal)",
+		"then": {
+			"type": "http",
+			"url": "https://$instance.myjetbrains.com/youtrack/rest/issue?project=$project&summary=$message&description=Time: $time%0AURL: $url%0AHostname: $hostName%0AStatus Code: $statusCode%0AType: $type%0ASource: $source%0AUser: $user",
+			"method": "put",
+			"authentication": {
+				"type": "bearer",
+				"token": "$token"
+			}
+			
+		}
+	}
+}
