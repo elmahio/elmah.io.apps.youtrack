@@ -31,8 +31,8 @@
 			"authentication": {
 				"type": "bearer",
 				"token": "$token"
-			}
-			
+			},
+			"testUrl": "https://$instance.myjetbrains.com/youtrack/rest/issue"
 		}
 	}
 }
