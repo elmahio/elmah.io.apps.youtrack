@@ -4,7 +4,7 @@
 		"name": "Token",
 		"description": "An access token from YouTrack needed to call the YouTrack API",
 		"example": "perm:cm9vdA==.ZmZm.5ZhYEwe3OlN78qWTAyRCUdE4w10pws",
-		"type": "text",
+		"type": "password",
 		"required": true
 	},{
 		"key": "instance",
