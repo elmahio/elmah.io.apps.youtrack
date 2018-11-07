@@ -1,4 +1,5 @@
 {
+	"helpUrl": "https://docs.elmah.io/elmah-io-apps-youtrack/",
 	"variables": [{
 		"key": "token",
 		"name": "Token",
