@@ -6,6 +6,7 @@
     <owners>elmah.io</owners>
     <id>elmah.io.apps.youtrack</id>
     <title>YouTrack Integration</title>
+    <license type="expression">Apache-2.0</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Create a new issue in YouTrack when a new error is logged on elmah.io.</description>
     <projectUrl>https://elmah.io/</projectUrl>
