@@ -24,7 +24,7 @@
 	}],
 	"rule": {
 		"title": "Create a new issue in YouTrack on all errors",
-		"query": "isNew:true AND (severity:Error OR severity:Fatal)",
+		"query": "isNew:true AND (severity:Error OR severity:Fatal) AND NOT isUptime:true AND NOT isHeartbeat:true",
 		"then": {
 			"type": "http",
 			"url": "https://$instance.myjetbrains.com/youtrack/rest/issue?project=$project&summary=$message&description=Time: $time%0AURL: $url%0AHostname: $hostName%0AStatus Code: $statusCode%0AType: $type%0ASource: $source%0AUser: $user",
